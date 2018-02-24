@@ -13,12 +13,28 @@ public class Representative {
 
     private String name;
 
+    private String party;
+
+    private String state;
+
     private String office;
 
     private String total_contributions;
 
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public String getParty() {
+        return party;
+    }
+
+    public String getState() {
+        return state;
     }
 
     public String getOffice() {
@@ -32,8 +48,10 @@ public class Representative {
     public Representative() {
     }
 
-    public Representative(String name, String office, String total_contributions) {
+    public Representative(String name, String party, String state, String office, String total_contributions) {
         this.name = name;
+        this.party = party;
+        this.state = state;
         this.office = office;
         this.total_contributions = total_contributions;
     }
