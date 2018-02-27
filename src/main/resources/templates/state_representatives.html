@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${state}"></title>
+</head>
+<body>
+<h1 th:text="${state}"></h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Party</th>
+        <th>Office</th>
+        <th>Total Contributions</th>
+    </tr>
+    <tr th:each="rep : ${representatives}">
+        <td th:text="${rep.name}"></td>
+        <td th:text="${rep.party}"></td>
+        <td th:text="${rep.office}"></td>
+        <td th:text="${rep.total_contributions}"></td>
+    </tr>
+</table>
+
+<a href="/">Back to Search</a>
+</body>
+</html>

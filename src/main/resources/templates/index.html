@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Gun Money</title>
+</head>
+<body>
+<h1>Gun Money</h1>
+
+<form method="post">
+    <select>
+        <option th:each="state : ${states}"
+        th:text="${state}"
+        th:value="${state}">
+        </option>
+    </select>
+
+    <input type="submit" value="Search"/>
+</form>
+</body>
+</html>
